@@ -17,8 +17,6 @@ def run_profile():
 
     data = load_wedding_data()
 
-    print("\n💍 Welcome to Happily Ever After!\n")
-
     # Budget
     if data["budget"] is None:
         data["budget"] = float(input("What is your total wedding budget (₹)? "))
