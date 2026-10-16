@@ -24,18 +24,17 @@ def value_or_na(text):
 
 
 # 1. Read the raw file
-# How much to trust each price, based on Panigrahana's evidence tier
+# How much to trust each price, based on Panigrahana's evidence tier.
+# high = price is confirmed or published; low = estimated or missing.
 CONFIDENCE_BY_TIER = {
     "studio-confirmed": "high",
-    "listing-reference": "medium",
-    "studio-estimate": "low",
+    "listing-reference": "high",
 }
 
 
 def get_confidence(evidence_tier):
-    """Turn Panigrahana's evidence tier into high / medium / low."""
+    """Turn Panigrahana's evidence tier into high or low."""
     return CONFIDENCE_BY_TIER.get(evidence_tier.strip(), "low")
-
 
 def get_services(rooms):
     """Describe on-site accommodation, if the venue has rooms."""

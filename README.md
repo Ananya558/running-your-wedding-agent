@@ -12,7 +12,7 @@ licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 - Kept only venues in India (891 of 992 rows)
 - Converted columns into this project's vendor schema
 - Marked missing information as `NA` instead of guessing it
-- Added `data_confidence` (high / medium / low), based on Panigrahana's evidence tier
+- Added `data_confidence`: **high** if the price is confirmed or published, **low** if it is estimated or missing
 - Added `style_tags`. **These are our own inference** from venue type, star rating,
   region and capacity, not part of the original data.
 
